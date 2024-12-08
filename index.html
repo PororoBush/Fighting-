@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body{
+            font-family: 'Itim';
+            background-color: pink;
+        }
+        #btn-alert{
+            
+            border-radius: 5px;
+            padding: 9px 12px;
+            outline-offset: 3px;
+            background-color: rgba(249, 248, 248, 0.558);
+            cursor: pointer;
+            font-size: 1.4em;
+            position:fixed;
+            left: 46%;
+            top: 45%;
+        }
+        @media (max-width: 576px) {
+            #btn-alert{
+                left: 28%;
+            }
+        }
+    </style>
+    <title>Go Go Fighting!!!</title>
+    
+</head>
+<body>
+    <button id="btn-alert" onclick="summon()">Click disini yaa</button>
+    <script>
+        //async digunakan agar menjalankan program di dalam satu persatu
+        async function summon() {
+            await Swal.fire("Halloo Dyaaa!!");
+            await Swal.fire("Bentar lagi udah ulangan yaa");
+            await Swal.fire({
+                title: "☆*: .｡. o(≧▽≦)o .｡.:*☆",
+                text: "Semangat yaa ulangannyaaa Fighting dyyy!!!",
+                imageUrl: 'gambar/cinglov.jpg',
+                imageWidth: 400,
+                imageHeight: 300,
+                });
+            }        
+    </script>
+</body>
+</html>
